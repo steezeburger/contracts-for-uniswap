@@ -36,6 +36,11 @@ dotenv -- bash -c 'yarn start -pk $PRIVATE_KEY \
   -c $CONFIRMATIONS'
 ```
 
-TODO
+* ERC-20
+```bash
+# deploy AstriaToken
+RUST_LOG=debug forge create --private-key $PRIV_KEY --rpc-url http://executor.astria.localdev.me src/AstriaToken.sol:AstriaToken
 
-* ERC-20 contracts
+# deploy SteezeToken
+RUST_LOG=debug forge create --private-key $PRIV_KEY --rpc-url http://executor.astria.localdev.me src/SteezeToken.sol:SteezeToken
+```
